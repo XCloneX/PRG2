@@ -1,5 +1,5 @@
 <?php
-$FileName = '../bd/trabalhadores.txt';
+$FileName = '../bd/visitantes.txt';
 $File = fopen($FileName,'r');
 $Visitantes=array();
 $I=1;
