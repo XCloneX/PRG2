@@ -15,9 +15,9 @@ foreach ($Visitantes as $Visitante) {
     $I++;
 }
 
-if (!empty($_POST['name']) && !empty($_POST['nacionalidade']) && !empty($_POST['idade']) && !empty($_POST['TV']) && !empty($_POST['epoca']) && !empty($_POST['checked'])) {
+if (!empty($_POST['name']) && !empty($_POST['nacionalidade']) && !empty($_POST['idade']) && !empty($_POST['TV']) && !empty($_POST['epoca']) && !empty($_POST['sexo'])) {
     $File = fopen($FileName, 'a');
-    fwrite($File,$I .",". $_POST['name'] .",". $_POST['nacionalidade'] .",". $_POST['idade'] . "," . $_POST['TV'] . "," . $_POST['epoca'] . "," . $_POST['checked'] . "," . "\n");
+    fwrite($File,$I .",". $_POST['name'] .",". $_POST['nacionalidade'] .",". $_POST['idade'] . "," . $_POST['TV'] . "," . $_POST['epoca'] . "," . $_POST['sexo'] . "," . "\n");
     fclose($File);
     //header('Location: ../login/login.html');
 } else {
