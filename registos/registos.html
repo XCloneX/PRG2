@@ -3,10 +3,38 @@
         <form action="registar_visitante.php " method="post" >
             Nome: <input type="text" name="name"><br>
             Nacionalidade: <input type="text" name="nacionalidade"><br>
-            Idade:<input type="number" name="idade" value=""><br>
-            Tipo de visitante:<input type="text" name="TV" value=""><br>
-            Epoca do ano:<input type="text" name="epoca" value=""><br>
-            Genero: Masculino <input type="radio" name="checked" value="masc"> Feminino <input type="radio" name="checked" value="femi"> <br>
+            Idade:<select class="" name="">
+                    <option value=""></option>
+                    <option value="">0-15</option>
+                    <option value="">16-24</option>
+                    <option value="">25-44</option>
+                    <option value="">45-64</option>
+                    <option value="">65+</option>
+                  </select><br>
+
+            Tipo de visitante:<select class="" name="TV">
+                                  <option value=""></option>
+                                  <option value="">Negocios</option>
+                                  <option value="">Sosinho</option>
+                                  <option value="">Amigos</option>
+                                  <option value="">Casal</option>
+                                  <option value="">Familia  </option>
+                              </select><br>
+
+            Epoca do ano:<select class="" name="">
+                            <option value=""></option>
+                            <option value="">Marco-Maio</option>
+                            <option value="">Junho-Agosto</option>
+                            <option value="">Setembro-Novembro</option>
+                            <option value="">Dezembro-Fevereiro</option>
+                          </select><br>
+
+            Genero:<select class="" name="">
+                      <option value=""></option>
+                      <option value="">Masculino</option>
+                      <option value="">Feminino</option>
+                   </select>
+                   <br>
             <input type="submit">
             <input type="reset">
         </form>
