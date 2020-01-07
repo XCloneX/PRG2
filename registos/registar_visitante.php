@@ -19,7 +19,7 @@ if (!empty($_POST['name']) && !empty($_POST['nacionalidade']) && !empty($_POST['
     $File = fopen($FileName, 'a');
     fwrite($File,$I .",". $_POST['name'] .",". $_POST['nacionalidade'] .",". $_POST['idade'] . "," . $_POST['TV'] . "," . $_POST['epoca'] . "," . $_POST['sexo'] . "," . "\n");
     fclose($File);
-    //header('Location: ../login/login.html');
+    header('Location: ../index/PontosInteresse.html');
 } else {
     echo "O utilizador tem de preencher todos os campos";
 }
