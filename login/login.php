@@ -72,7 +72,7 @@ if ($Hora>11 && $Hora<19) {
   fwrite($File2, ($_POST['nick']) .",". $HoraDePonto . "," . $Radio . "," . "\n");
 //Escreve no ficheiro da assiduidade o utilizador, a hora de ponto e entrou ou saiu
 */
-echo "Nice";
+header('Location:../logado/LogadoPontosInteresse.html');
 }
 
 fclose($File2);
