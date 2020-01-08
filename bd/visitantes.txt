@@ -2,3 +2,6 @@
 2,Sampaio,Brasil,16-24,Amigos,Junho-Agosto,Masculino,
 3,alex,Brasil,25-44,Negocios,Junho-Agosto,Masculino,
 4,alex,Brasil,25-44,Negocios,Junho-Agosto,Masculino,
+5,cancro,Brasil,16-24,Negocios,Junho-Agosto,Masculino,
+6,cancro lmg ,Angola,16-24,Sozinho,Setembro-Novembro,Masculino,
+7,alexandre,Brasil,16-24,Sozinho,Marco-Maio,Masculino,123,
