@@ -1,16 +1,12 @@
 <?php
+session_start();
     // Declaração de variáveis
 $FileName ="../bd/visitantes.txt";
-$FileName2 = "../bd/assiduidade.csv";
 $File = fopen($FileName,"r");
-$File2 = fopen($FileName2,"a");
 $Nome = ($_POST['name']);
 $Password = ($_POST['pw']);
 $Verdade = false;
-$Hora = date('H');
-$HoraDePonto = date('d-m H:i');
-$Assiduidades = array();
-$Utilizador = array();
+$_Session['nome'] = $_POST['name'];
 
 while (($Line = fgets($File,4096)) !== false ) {
 // Verifica a existencia do utilizador enquanto percorre o ficheiro  e guarda o seu conteudo em um array
