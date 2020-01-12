@@ -6,8 +6,8 @@ $File = fopen($FileName,"r");
 $Nome = ($_POST['name']);
 $Password = ($_POST['pw']);
 $Verdade = false;
-$_Session['nome'] = $_POST['name'];
-
+$_SESSION['nome'] = $_POST['name'];
+echo $_SESSION['nome'];
 while (($Line = fgets($File,4096)) !== false ) {
 // Verifica a existencia do utilizador enquanto percorre o ficheiro  e guarda o seu conteudo em um array
     $Utilizador = explode(',' , $Line);

@@ -1,8 +1,8 @@
 <?php
 session_start();
-$name = $_Session['name'];
+$name = $_SESSION['nome'];
 
-$File=fopen("../bd/avaliacoes.txt","r");
+$File=fopen("../bd/avaliacoes.txt","a");
 
 
 fwrite($File, $name . "," . $_POST['Amb'] . "," . $_POST['Fam'] . "," . $_POST['Lim'] . "\n");
