@@ -22,6 +22,7 @@ while (($Line = fgets($File,4096)) !== false ) {
     echo "Este utilizador não se encontra registado/As credenciais nao correspondem";
 } else {
 // Se econtrar o utilizador, abre o ficheiro assiduidade e verifica a sua entrada/saida
+
   /*  $F = fopen($FileName2,'r');
     $Operacao = '';
 

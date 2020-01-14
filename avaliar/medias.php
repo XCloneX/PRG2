@@ -1,5 +1,5 @@
 <?php
-//start_session();
+
 
 $File=fopen("../bd/avaliacoes.txt","r");
 
