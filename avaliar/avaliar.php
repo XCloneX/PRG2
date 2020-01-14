@@ -1,7 +1,7 @@
 <?php
 session_start();
 $name = $_SESSION['nome'];
-
+$i = 1;
 $File=fopen("../bd/avaliacoes.txt","a");
 echo $_POST['value'];
 
