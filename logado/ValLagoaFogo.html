@@ -13,15 +13,14 @@
   </head>
   <body>
     <div class="content">
-      4.Lagoa das Sete Cidades <br>
-      Concelho:Ponta Delgada<br>
-      Coordenas GPS:37.866667,-25.783333<br>
-      <img src="../img/setecidades.jfif" width="280" height="125"><br>
-</div>
-    Avalia
-    <form class="" action="avaliar.php" method="post">
 
-    Ambiente:<select class="Ambiente" name="">
+        7.Lagoa do Fogo <br>
+        Concelho:Povoaçao/Ribeira Grande <br>
+        Coordenas GPS:37.75,-25.466667 <br>
+        <img src="../img/lagoafoga.jpg" width="280" height="125"><br>
+    Avalia
+    <form class="" action="../avaliar/avaliar.php" method="post">
+    Ambiente:<select class="Ambiente" name="Amb">
               <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -29,7 +28,7 @@
               <option value="4">4</option>
               <option value="5">5</option>
     </select><br>
-    Familiar:<select class="Fam" name="">
+    Familiar:<select class="Familiar" name="Fam">
               <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -37,7 +36,7 @@
               <option value="4">4</option>
               <option value="5">5</option>
     </select><br>
-    Limpeza:<select class="Lim" name="">
+    Limpeza:<select class="Limpeza" name="Lim">
               <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -45,6 +44,10 @@
               <option value="4">4</option>
               <option value="5">5</option>
     </select>
+    <input type="hidden" name="value" value="1">
+    <input type="submit">
+    <input type="reset">
+
   </form>
 
 </div>
