@@ -1,4 +1,4 @@
-<?php
+  <?php
 session_start();
     // Declaração de variáveis
 $FileName ="../bd/visitantes.txt";

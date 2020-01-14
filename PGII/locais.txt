@@ -1,0 +1,10 @@
+1;Poça da Dona Beja;COORDENADAS;Natureza e Parques
+2;Plantações de Chá Gorreana;COORDENADAS;Passeios Temáticos
+3;Ponta da Ferraria;COORDENADAS;Natureza e Parques
+4;Lagoa das Sete Cidades;COORDENADAS;Corpos de Água
+5;Parque Terra Nostra;COORDENADAS;Natureza e Parques
+6;Ilhéu de Vila Franca do Campo;COORDENADAS;Passeios Temáticos
+7;Lagoa do Fogo;COORDENADAS;Corpos de Água
+8;Lagoa das Furnas;COORDENADAS;Corpos de Água
+9;Salto de Cabrito;COORDENADAS;Trilhos
+10;Caldeira das Furnas;COORDENADAS;Natureza e Parques
