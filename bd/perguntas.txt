@@ -1,0 +1,5 @@
+1,Gostou do passeio?,
+2,O que achou da ilha?,
+3,Ficou satisfeito com o serviço?,
+4,Dê a sua opinião sobre a ilha,
+5,De 1 a 5 quanto dava a este passeio,

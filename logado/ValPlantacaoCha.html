@@ -18,9 +18,8 @@
       Coordenas GPS:37.818309,-25.402417 <br>
       <img src="../img/gorreana.jfif" width="280" height="125">
     Avalia
-    <form class="" action="avaliar.php" method="post">
-<input type="text" name="" value="1">
-    Ambiente:<select class="Ambiente" name="">
+    <form class="" action="../avaliar/avaliar.php" method="post">
+    Ambiente:<select class="Ambiente" name="Amb">
               <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -28,7 +27,7 @@
               <option value="4">4</option>
               <option value="5">5</option>
     </select><br>
-    Familiar:<select class="Fam" name="">
+    Familiar:<select class="Fam" name="Fam">
               <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -36,7 +35,7 @@
               <option value="4">4</option>
               <option value="5">5</option>
     </select><br>
-    Limpeza:<select class="Lim" name="">
+    Limpeza:<select class="Lim" name="Lim">
               <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -44,7 +43,9 @@
               <option value="4">4</option>
               <option value="5">5</option>
     </select>
-
+ <input type="hidden" name="value" value="2">
+ <input type="submit">
+ <input type="reset">
   </form>
 
 </div>
