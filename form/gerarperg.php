@@ -4,7 +4,7 @@ session_start();
 $_SESSION['p1'] = "";
 $_SESSION['p2'] = "";
 $_SESSION['p3'] = "";
-$File = fopen("bd/perguntas.txt", "r");
+$File = fopen("../bd/perguntas.txt", "r");
 $rand = (rand(1,5));
 $rand1 = (rand(1,5));
 $rand2 = (rand(1,5));
@@ -30,5 +30,5 @@ while (($Line =fgets($File,4096)) !== false ) {
       echo $Perguntas[1];
       echo "<br>";
     }
-    header('Location:../form/randform.php')
+    header('Location:../form/randform.php');
 }
