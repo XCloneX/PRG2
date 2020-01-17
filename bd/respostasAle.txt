@@ -1,0 +1,12 @@
+;;ChaGoreana,;2;2020-01-15
+;;ChaGoreana,;2;2020-01-15
+;;SeteCidades,;2;2020-01-24
+;;PontaDaferraria,;3;2020-01-24
+;SeteCidades,;3;2020-01-30
+;PontaDaferraria,;3;2020-01-30
+;TerraNostra,;3;2020-01-24
+;PontaDaferraria,;3;2020-01-24
+;PontaDaferraria,;1;2020-12-23
+;ChaGoreana,;2;2020-12-23
+;TerraNostra,;2;2020-01-23
+;TerraNostra,;1;2020-01-23
