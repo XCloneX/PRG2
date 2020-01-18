@@ -10,3 +10,7 @@
 ;ChaGoreana,;2;2020-12-23
 ;TerraNostra,;2;2020-01-23
 ;TerraNostra,;1;2020-01-23
+;TerraNostra,;3;2020-01-22
+;TerraNostra,;1;2020-01-22
+;SeteCidades,;1;2020-01-30
+;ChaGoreana,;3;2020-01-30
