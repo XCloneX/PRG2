@@ -1,6 +1,5 @@
 <?php
-
-$File=fopen('historia.csv','c+');
+$File=fopen('registarhistoria.txt','r');
 $historias = array();
 if ($file!= null) {
   while (($line = fgets($File,4000)) !== false) {
