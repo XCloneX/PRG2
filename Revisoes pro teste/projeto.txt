@@ -1,0 +1,249 @@
+registo.html
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <title>Registo</title>
+
+    <style>
+        input, select {
+            margin: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+        
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+        }
+    </style>
+<body>
+    <form action="registo_pessoa.php" method="post">
+    Nome: <input type='text' name='name' value=""><br>
+    Nome Fiticio: <input type='text' name='namef' value=""><br>
+    Idade: <input type='text' name='idade' value=""><br>
+    Sexo:
+    <input type="radio" name="sexo" value="1">Masculino
+    <input type="radio" name="sexo" value="2">Feminino<br>
+    Email: <input type="email" name="email" value=""><br>
+    <input type='submit'>
+</body>
+</html>
+
+==================================================================================================================
+registo_pessoa.php
+
+<?php
+    $filename = 'nomedaspessoas.csv';
+    $file = fopen($filename,'c+');
+    $pessoas = array();
+    if ($file != null) {
+        while (($pessoas[] = fgets($file, 4096)) !== FALSE);
+        fclose($file);
+    }
+
+    $id_pessoa = count($pessoas);
+
+    //Verifica se o campo nome foi preenchido
+    if (empty($_POST["name"])) {
+        echo "É obrigatório preencher o nome.";
+        exit;
+    }
+
+    if (empty($_POST["idade"])) {
+        echo "É obrigatório preencher a idade.";
+        exit;
+    }
+
+    if (!isset($_POST["sexo"])) {
+        echo "É obrigatório selecionar o sexo.";
+        exit;
+    }
+
+    if (empty($_POST["email"])) {
+        echo "É obrigatório preencher o email.";
+        exit;
+    }
+
+    // abrir o ficheiro de trabalhadores para gravar os dados de um novo trabalhador
+    $file = fopen($filename,'a'); //esse 'a' apend vai acrescentar um nome no fim do ficheiro
+    fwrite($file, $id_pessoa . ',' . $_POST['name'] . ',' . $_POST['namef'] . ',' . $_POST['idade'] . ',' . $_POST['sexo'] . ',' . $_POST['email'] . "\n");
+    fclose($file);
+    
+    echo "Escrita efetuada com sucesso.";
+?>
+
+==================================================================================================================
+historia.html
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <title>Registo</title>
+
+    <style>
+        input, select {
+            margin: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+        
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+        }
+    </style>
+<body>
+    <form action="registo_historias.php" method="post">
+    Data: <input type='text' name='data' value=""><br>
+    Visibilidade:
+    <input type="radio" name="visibilidade" value="1">Pública
+    <input type="radio" name="visibilidade" value="2">Privada<br>
+    Tipo: <select name="tipo">
+        <option value="Mensagem">Mensagem</option>
+        <option value="Testemunho">Testemunho</option>
+        <option value="Opinião">Opinião</option>
+        <option value="Sugestão">Sugestão</option>
+        </select><br>
+    História: <textarea name="conteudo"></textarea><br>
+    Anexo: <input type='text' name='anexo' value=""><br>
+    Autor: <input type="email" name="autor" value=""><br>
+    <input type='submit'>
+</body>
+</html>
+
+==================================================================================================================
+registo_historias.php
+
+<?php
+    $filename = 'historias.csv';
+    $file = fopen($filename,'c+');
+    $historias = array();
+    if ($file != null) {
+        while (($historias[] = fgets($file, 4096)) !== FALSE);
+        fclose($file);
+    }
+
+    $id_historia = count($historias);
+
+    //Verifica se o campo data foi preenchido
+    if (empty($_POST["data"])) {
+        echo "É obrigatório preencher a data.";
+        exit;
+    }
+
+    if (!isset($_POST["visibilidade"])) {
+        echo "Não percebeu a visibilidade.";
+        exit;
+    }
+
+    if (empty($_POST["tipo"])) {
+        echo "É obrigatório selecionar o tipo.";
+        exit;
+    }
+
+    if (empty($_POST["conteudo"])) {
+        echo "É obrigatório preencher o conteudo.";
+        exit;
+    }
+
+    //Escreve no ficheiro csv os campos do formulario html
+    $file = fopen($filename,'a'); //esse 'a' apend vai acrescentar um nome no fim do ficheiro
+    fwrite($file, $id_historia . ',' . $_POST['data'] . ',' . $_POST['visibilidade'] . ',' . $_POST['tipo'] . ',' . $_POST['conteudo'] . ',' . $_POST['anexo'] . ',' . $_POST['autor'] . "\n");
+    fclose($file);
+    
+    echo "Escrita efetuada com sucesso.";
+?>
+
+===================================================================================================================
+pesquisa.php
+
+<html>
+<head>
+</head>
+<body>
+
+
+<?php
+    if (count($_POST) == 0) {
+        $filename = 'nomedaspessoas.csv';
+        $file = fopen($filename,'c+');
+        $pessoas = array();
+        if ($file != null) {
+            while (($line = fgets($file, 4096)) !== FALSE) {
+                $pessoas[] = explode(";", $line);
+            }
+            fclose($file);
+        }
+
+?>
+
+<form action="" method="post">
+    Pessoa: <select name="id_pessoa">
+        <?php
+            foreach ($pessoas as $pessoa) {
+                echo '<option value="'.$pessoa[0].'">'
+                        .$pessoa[1]
+                    .'</option>';
+            }
+        ?>
+    </select>
+
+    <input type="submit" value="pesquisar"/>
+
+</form>
+
+<?php } else {
+
+    //aqui é quando é submetido
+    $filename = 'historias.csv';
+    $file = fopen($filename,'c+');
+    $historias = array();
+    if ($file != null) {
+        while (($line = fgets($file, 4096)) !== FALSE) {
+            $historia = explode(";", $line);
+
+            if ($_POST['id_pessoa'] == trim($historia[6])) {
+                echo $historia[4] . "<br>";
+            }
+        }
+        fclose($file);
+    }
+
+    }
+
+?>
+</body>
+</html>
+
+==================================================================================================================
+pesquisa.html
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <title>Registo</title>
+
+    <style>
+        input, select {
+            margin: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+        
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+        }
+    </style>
+<body>
+    <form action="pesquisa_simples.php" method="post">
+        <label for="name">ID Pessoa: </label>
+        <input type="text" name="id_pessoa">
+        <br>
+    <input type='submit'>
+</body>
+</html>
